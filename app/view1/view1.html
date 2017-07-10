@@ -3,26 +3,57 @@
         <div class="col-md-4 no-float">
             <div class="container">
                 <div class="row half-row">
-                    <div class="col-md-6 inner-float">
+                    <div class="col-md-4 inner-float">
                         <div class="panel panel-default" style="height:100%">
                             <div id="grid4"></div>
                         </div>
                     </div>
-                    <div class="col-md-6 inner-float">
+                    <div class="col-md-4 inner-float">
                         <div class="panel panel-default" style="height:100%">
                             <div id="grid1"></div>
                         </div>
                     </div>
+                    <div class="col-md-4 inner-float">
+                        <div class="panel panel-default" id="info-panel" style="height:100%;">
+                            <div class="panel-heading">
+                                <h3 class = "panel-title">台风信息</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div class="content" style="padding:15px; color:white;">
+                                    <div ng-if="show">
+                                        <p>台风：{{typhoon.name}}</p>
+                                        <p>强度等级：{{typhoon.strong}}</p>
+                                        <p>最大风力：{{typhoon.power}}级</p>
+                                        <p>最大风速：{{typhoon.speed}}m/s</p>
+                                        <p>中心气压：{{typhoon.pressure}}hpa</p>
+                                        <p>移动速度：{{typhoon.move_speed}}km/h</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
                 <div class="row half-row">
-                    <div class="col-md-6 inner-float">
+                    <div class="col-md-4 inner-float">
                         <div class="panel panel-default" style="height:100%">
                             <div id="grid2"></div>
                         </div>
                     </div>
-                    <div class="col-md-6 inner-float">
+                    <div class="col-md-4 inner-float">
                         <div class="panel panel-default" style="height:100%">
                             <div id="grid3"></div>
+                        </div>
+                    </div>
+                    <div class="col-md-4 inner-float">
+                        <div class="panel panel-default" id="warning-panel" style="height:100%;">
+                            <div class="panel-heading">
+                                <h3 class = "panel-title">警报信息</h3>
+                            </div>
+                            <div class="panel-body">
+                                <div class="content" style="padding:15px; color:white;">
+                                    <div id="warning"></div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
