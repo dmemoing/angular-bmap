@@ -361,6 +361,12 @@ angular.module('myApp.view1', ['ngRoute', 'ui.bootstrap'])
 					type: 'value',
 					name: "水位(m)",
 					max: 25
+				}, {
+					type: 'value',
+					name: "降雨(cm)",
+					nameLocation: 'start',
+					max: 50,
+					inverse: true
 				}],
 				series: [{
 					name: '水位',
@@ -374,6 +380,20 @@ angular.module('myApp.view1', ['ngRoute', 'ui.bootstrap'])
 					areaStyle: {normal: {color: '#72ccff'}},
 					lineStyle: {normal: {color: '#72ccff'}},
 					itemStyle: {normal: {color: '#72ccff'}},
+					data: []
+				},{
+					name: '降雨',
+					type: 'line',
+					yAxisIndex: 1,
+					label: {
+						normal: {
+							show: true,
+							position: 'top'
+						}
+					},
+					areaStyle: {normal: {color: '#a6c84c'}},
+					lineStyle: {normal: {color: '#a6c84c'}},
+					itemStyle: {normal: {color: '#a6c84c'}},
 					data: []
 				}]
 			};
@@ -441,7 +461,9 @@ angular.module('myApp.view1', ['ngRoute', 'ui.bootstrap'])
 					},
 					series: [{
 						data: njWData
-						}]
+						},{
+						data: njRData
+					}]
 				});
 				var tag = 30;
 				setInterval(function () {
@@ -458,6 +480,8 @@ angular.module('myApp.view1', ['ngRoute', 'ui.bootstrap'])
 					nanjing.setOption({
 						series: [{
 							data: njWData
+						},{
+							data: njRData
 						}]
 					});
 					tag++;
@@ -770,6 +794,8 @@ angular.module('myApp.view1', ['ngRoute', 'ui.bootstrap'])
 								},
 								series: [{
 										data: entry.wdata
+									},{
+										data: entry.rdata
 									}]
 							});
 						}, 500);
