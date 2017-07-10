@@ -1,0 +1,126 @@
+/*html, body, .row, .col-md{
+    width: 100%;
+  height: 100%;
+}
+.row .no-float {
+  height: 100%;
+}*/
+html,body,ui-view,visits,.view,.container {
+  height:100%;
+  overflow: hidden;
+}
+
+body{
+  background-color: #293441;
+}
+/*	body{
+		background-color: #333;
+	}*/
+.container {
+  padding-left: 0;
+  padding-right: 0;
+  display:table;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.row {
+  height: 100%;
+  display: table-row;
+}
+
+.half-row {
+  height: 50%;
+  display: table-row;
+}
+
+.row .no-float {
+  display: table-cell;
+  float: none;
+}
+
+.col-md-3, .col-md-4, .col-md-5{
+  padding: 5px;
+}
+
+.inner-float{
+  display: table-cell;
+  float: none;
+  padding: 0 0 5px 5px;
+}
+
+[class*="col-"] {
+  float: none;
+  display: table-cell;
+  vertical-align: top;
+}
+
+.panel{
+  margin-bottom: 0;
+  height: 100%;
+}
+
+.panel-body {
+  height: 100%;
+  padding: 0 0 27px 0;
+}
+
+.panel-heading{
+  color: #fafafa !important;
+  background-color: #415265 !important;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.panel-title{
+  font-size: 15px;
+}
+
+.content{
+  height: 100%;
+  background-color: #415265;
+  border-radius: 3px;
+  overflow-y: scroll;
+}
+
+::-webkit-scrollbar {
+  display: none;
+}
+
+#allmap, #grid1, #grid2, #grid3, #grid4, #grid5, #grid6, #self_bar1, #self_bar2, #self_bar3, #self_bar4,
+#city1, #city2, #city3, #city4, #city5, #city6
+{
+  width: 100%;
+  height: 100%;
+  font-family:"微软雅黑";
+  border-radius: 3px;
+}
+#map-col{
+  padding-bottom: 10px;
+}
+
+#tab-panel{
+  padding-right: 10px;
+}
+
+#tab-inner{
+  height: calc(100% - 40px);
+}
+
+img[src="lib/typhoon.png"]{
+  -webkit-animation:run 6s linear 0s infinite;
+}
+@-webkit-keyframes run{
+  from{
+    -webkit-transform:rotate(360deg);
+  }
+  to{
+    -webkit-transform:rotate(0deg);
+  }
+}
+/*  img[src="http://api0.map.bdimg.com/images/copyright_logo.png"]{
+		display: none;
+	}*/
+.anchorBL{
+  display:none;
+}

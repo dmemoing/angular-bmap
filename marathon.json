@@ -1,0 +1,35 @@
+{
+  "id": "${IMAGE}",
+  "cmd": null,
+  "cpus": 0.5,
+  "mem": 128,
+  "disk": 0,
+  "instances": 1,
+  "acceptedResourceRoles": [
+      "*"
+    ],
+  "container": {
+      "type": "DOCKER",
+      "volumes": [],
+      "docker": {
+            "image": "registry.njuics.cn/${IMAGE_NAME}",
+            "network": "BRIDGE",
+            "portMappings": [
+                    {
+                              "containerPort": 8000,
+                              "hostPort": 0,
+                              "protocol": "tcp",
+                              "labels": {}
+                            }
+                  ],
+            "privileged": false,
+            "parameters": [],
+            "forcePullImage": true
+          }
+    },
+  "labels": {
+      "HAPROXY_GROUP": "external",
+      "HAPROXY_0_VHOST": "typhoon.njuics.cn"
+    }
+}
+
