@@ -29,7 +29,7 @@
     },
   "labels": {
       "HAPROXY_GROUP": "external",
-      "HAPROXY_0_VHOST": "typhoon.njuics.cn"
+      "HAPROXY_0_VHOST": "ityphoon.njuics.cn"
     }
 }
 
