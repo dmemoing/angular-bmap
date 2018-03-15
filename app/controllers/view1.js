@@ -215,7 +215,7 @@ angular.module('typhoon.controllers')
 				water.push({
 					name: date.toString(),
 					value: [key, rainData[index][2]]
-				})
+				});
 			}
 			
 			var initialData = [];
