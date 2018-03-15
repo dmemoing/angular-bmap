@@ -1,16 +1,7 @@
 'use strict';
 
-angular.module('myApp.view1', ['ngRoute', 'ui.bootstrap'])
-	
-	.config(['$routeProvider', function ($routeProvider) {
-		$routeProvider.when('/typhoon', {
-			templateUrl: 'view1/view1.html',
-			controller: 'View1Ctrl'
-		});
-	}])
-	
-	.controller('View1Ctrl', ['$timeout', '$interval', '$scope', '$http', '$filter', function ($timeout, $interval, $scope, $http, $filter) {
-		
+angular.module('typhoon.controllers')
+	.controller('View1Ctrl', function ($timeout, $interval, $scope, $http, $filter) {
 		
 		$timeout(function () {
 			$scope.typhoon = {};
@@ -917,4 +908,4 @@ angular.module('myApp.view1', ['ngRoute', 'ui.bootstrap'])
 			});
 			
 		});
-	}]);
+	});
