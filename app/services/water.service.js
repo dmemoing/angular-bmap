@@ -1,5 +1,5 @@
 angular.module('typhoon.services')
-.service('Water', function ($http) {
+.service('Water', function () {
     var rainData = [
         ["2016/06/28 00:00", 0.5, 8.21],
         ["2016/06/28 02:00", 0.5, 8.16],

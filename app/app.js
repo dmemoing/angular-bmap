@@ -16,7 +16,7 @@ angular.module('typhoon.controllers', ['ngRoute', 'ui.bootstrap'])
 .config(['$routeProvider', function ($routeProvider) {
   $routeProvider.when('/typhoon', {
     templateUrl: 'templates/dashboard.html',
-    controller: 'View1Ctrl',
+    controller: 'dashboard',
 	  resolve:{
 		  'TyphoonData':function(Typhoon){
 			  return Typhoon.promise;

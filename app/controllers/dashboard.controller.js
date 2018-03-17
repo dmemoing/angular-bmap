@@ -1,7 +1,7 @@
 'use strict';
 
 angular.module('typhoon.controllers')
-	.controller('View1Ctrl', function ($timeout, $interval, $scope, $http, $filter) {
+	.controller('dashboard', function ($timeout, $interval, $scope, $http, $filter) {
 		
 		$timeout(function () {
 			$scope.typhoon = {};
@@ -231,31 +231,6 @@ angular.module('typhoon.controllers')
 					value: [key, 0]
 				});
 			}
-			
-			// function randomData() {
-			// 	now = new Date(+now + oneDay);
-			// 	value = value + Math.random() * 21 - 10;
-			// 	return {
-			// 		name: now.toString(),
-			// 		value: [
-			// 			[now.getFullYear(), now.getMonth() + 1, now.getDate()].join('/'),
-			// 			Math.round(value)
-			// 		]
-			// 	}
-			// }
-			
-			// var data = [];
-			// var now = +new Date(1997, 9, 3);
-			// var oneDay = 24 * 3600 * 1000;
-			// var value = Math.random() * 1000;
-			// for (var i = 0; i < 1000; i++) {
-			// 	data.push(randomData());
-			// }
-			
-			
-			// var date1 = +new Date("2016-09-10T14:00:00");
-			// var date2 = +new Date("2016-09-10T16:00:00");
-			// console.log((date2 - date1)/(3600 * 1000));
 			
 			var option = {
 				title: {
@@ -872,7 +847,7 @@ angular.module('typhoon.controllers')
 						if (count >= 45) {
 							interval = interval * 2;
 						}else{
-							interval = interval / 2;
+							interval = interval / 4;
 						}
 						$timeout(job, interval);
 					}
@@ -898,10 +873,7 @@ angular.module('typhoon.controllers')
 				
 				//开始绘制台风移动动画
 				var count = 1;
-				var date1 = +new Date(pointsArray[0][9]);
-				var date2 = +new Date(pointsArray[1][9]);
-				var interval = (date2 - date1) / 3600 / 2;
-				$timeout(job, interval);
+				job();
 				
 				$("#warning").append("台风莫兰蒂生成。<br/>");
 				
